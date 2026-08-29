@@ -38,11 +38,14 @@ export function PolicyPanel() {
         setMinEdge(p.minEdge.toString());
         setAutoExecute(p.autoExecute);
       }
-    } else if (Array.isArray(policyData) && policyData.length > 0 && policyData[0] > 0n) {
-        setMaxTrade(policyData[0].toString());
-        setMinConfidence(policyData[1].toString());
-        setMinEdge(policyData[2].toString());
-        setAutoExecute(policyData[3]);
+    } else if (Array.isArray(policyData)) {
+      const arr = policyData as any[];
+      if (arr.length > 0 && arr[0] > 0n) {
+        setMaxTrade(arr[0].toString());
+        setMinConfidence(arr[1].toString());
+        setMinEdge(arr[2].toString());
+        setAutoExecute(arr[3]);
+      }
     }
   }, [policyData]);
 
