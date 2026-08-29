@@ -1,0 +1,142 @@
+export const oraclePolicyAbi = [
+  {
+    "type": "function",
+    "name": "getPolicy",
+    "inputs": [
+      {
+        "name": "_user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct OraclePolicy.Policy",
+        "components": [
+          {
+            "name": "maxTradeAmount",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minConfidence",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "minEdge",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "autoExecute",
+            "type": "bool",
+            "internalType": "bool"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "policies",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "maxTradeAmount",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "minConfidence",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "minEdge",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "autoExecute",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setPolicy",
+    "inputs": [
+      {
+        "name": "_maxTradeAmount",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_minConfidence",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_minEdge",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_autoExecute",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "PolicyUpdated",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "maxTradeAmount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "minConfidence",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "minEdge",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "autoExecute",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  }
+] as const;
