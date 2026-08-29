@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { PolicyPanel } from "@/components/PolicyPanel";
 import { ChatPanel } from "@/components/ChatPanel";
 import { ConnectWallet } from "@/components/ConnectWallet";
-import { AgentTerminal } from "@/components/AgentTerminal";
+import AgentTerminal from "@/components/AgentTerminal";
 import Image from "next/image";
 
 export default function Home() {
